@@ -1,30 +1,64 @@
 body {
     font-family: sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    cursor: url('path/to/your/custom-cursor.png'), auto;
 }
+
+#particleCanvas {
+    position: absolute; /* To overlay on top of other content if needed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* To keep it in the background */
+}
+.login-container {
+    /* ... other styles ... */
+    cursor: pointer; /* Example: Changes the cursor to a hand */
+  }
+
 
 .login-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 380px;
+    height: 340px;
     text-align: center;
+    
+}
+.login-container {
+    box-shadow: 0 0 10px red; /* Shadow on all sides *
+    /* ... other styles ... */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .login-container:hover {
+    box-shadow: 0 0 16px greenyellow; /* Slightly stronger shadow on hover */
+    transform: translateY(-2px); /* Tiny lift on hover */
+  }
+
+
+#btn {
+    margin-top: 20px;
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .form-group {
+    padding-top: 10px;
     margin-bottom: 15px;
     text-align: left;
 }
+
 
 label {
     display: block;
@@ -59,3 +93,4 @@ button:hover {
     color: red;
     margin-top: 10px;
 }
+
